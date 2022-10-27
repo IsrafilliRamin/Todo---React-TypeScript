@@ -18,16 +18,16 @@ console.log(todos);
 
   const handleAdd = (e:React.FormEvent) => {
     e.preventDefault()
-    if(todo){
-      setTodos([...todos,{id:Date.now(),todo,isDone:false}])
-      setTodo("")
+    if(todo.trim().length === 0){
+     return;
     }else{
-      return
-    }
+      setTodos([...todos,{id:Date.now(),todo,isDone:false}]);
+      setTodo("");
+    };
       
 
       
-  }
+  };
   
   return (
     <div className="App">
